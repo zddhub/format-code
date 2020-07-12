@@ -6,11 +6,7 @@ import commands from "./commands";
 const FORMAT_SELECTION_COMMAND = 'editor.action.formatSelection';
 const FORMAT_DOCUMENT_COMMAND = 'editor.action.formatDocument';
 
-async function formatCode(language: string | undefined) {
-	const editor = vscode.window.activeTextEditor;
-	if (!editor) {
-		return;
-	}
+async function formatCode(language: string | undefined, editor: vscode.TextEditor) {
 	const document = editor.document;
 
 	await vscode.languages.setTextDocumentLanguage(document, language || document.languageId);
@@ -34,9 +30,9 @@ export function activate(context: vscode.ExtensionContext) {
 	// The commandId parameter must match the command field in package.json
 
 	commands.map(command => command.command).forEach((command) => {
-		let disposable = vscode.commands.registerCommand(command, () => {
+		let disposable = vscode.commands.registerTextEditorCommand(command, (textEditor) => {
 			const language = command.split('.').pop();
-			formatCode(language);
+			formatCode(language, textEditor);
 		});
 		context.subscriptions.push(disposable);
 	});

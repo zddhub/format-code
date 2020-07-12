@@ -25,7 +25,8 @@
 		"commands": [
 			{
 				"command": "format-code.format.typescript",
-				"title": "Format TypeScript"
+				"title": "Format TypeScript",
+				"when": "editorTextFocus"
 			},
 			{
 				"command": "format-code.format.javascript",
