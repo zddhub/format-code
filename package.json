@@ -3,6 +3,7 @@
 	"displayName": "format-code",
 	"description": "Format code in untitled file",
 	"version": "0.0.1",
+	"publisher": "zddhub",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
