@@ -1,13 +1,13 @@
 {
 	"name": "format-code",
 	"displayName": "format-code",
-	"description": "Format code snippets",
+	"description": "Format code in untitled file",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.47.0"
 	},
 	"categories": [
-		"Other"
+		"Formatters"
 	],
 	"activationEvents": [
 		"onCommand:format-code.format.typescript",
@@ -21,6 +21,16 @@
 		"onCommand:format-code.format.java"
 	],
 	"main": "./out/extension.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zddhub/format-code.git"
+	},
+	"keywords": [
+		"format",
+		"code",
+		"untitled",
+		"formatter"
+	  ],
 	"contributes": {
 		"commands": [
 			{
