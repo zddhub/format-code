@@ -10,14 +10,54 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:format-code.helloWorld"
+		"onCommand:format-code.format.typescript",
+		"onCommand:format-code.format.javascript",
+		"onCommand:format-code.format.json",
+		"onCommand:format-code.format.python",
+		"onCommand:format-code.format.ruby",
+		"onCommand:format-code.format.cpp",
+		"onCommand:format-code.format.swift",
+		"onCommand:format-code.format.go",
+		"onCommand:format-code.format.java"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "format-code.helloWorld",
-				"title": "Hello World"
+				"command": "format-code.format.typescript",
+				"title": "Format TypeScript"
+			},
+			{
+				"command": "format-code.format.javascript",
+				"title": "Format JavaScript"
+			},
+			{
+				"command": "format-code.format.json",
+				"title": "Format JSON"
+			},
+			{
+				"command": "format-code.format.python",
+				"title": "Format Python"
+			},
+			{
+				"command": "format-code.format.ruby",
+				"title": "Format Ruby"
+			},
+			{
+				"command": "format-code.format.cpp",
+				"title": "Format CPP"
+			},
+			{
+				"command": "format-code.format.swift",
+				"title": "Format Swift"
+			},
+			{
+				"command": "format-code.format.go",
+				"title": "Format Golang"
+			},
+			{
+				"command": "format-code.format.java",
+				"title": "Format Java"
 			}
 		]
 	},
